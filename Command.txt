@@ -1,0 +1,34 @@
+gprof:
+       g++ -Wall -pg CA1.cpp -o result
+       ./result
+       (input=100000)
+       ls gmon.out
+       gprof result gmon.out > output
+       cat output
+       
+Vector quantization;
+       python3 vector_qu.py
+       
+MPI:
+       mpicc CA3.c
+       mpirun -np 4 a.out
+       
+Histogram:
+       python3 Histo.py
+                 or
+       mpiexec -n 1 python3 Histo.py Kitchen.png
+       
+LUP:
+       g++ main.cpp -o result
+       ./result                  
+                        
+Hyper QS:
+       mpicc -g -Wall -o sort hypersort.c -lm
+       mpiexec -n 2 ./sort input.txt output.txt
+                           
+AWK:
+      awk -f assign.awk table.txt
+      
+Fractal: 
+      python3 CA_Assignment.py
+                                 
